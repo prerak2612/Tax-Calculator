@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="submit.php" method="post">
+        <label for="income">Enter gross annual income</label><br>
+        <input type="text" id="income" name="income" placeholder="Enter gross annual income" required><br>
+        <div class="error-icon" id="income-error">!</div>
+        <div class="tooltip" id="income-tooltip">Please enter numbers only</div><br>
+        
+        <label for="extraIncome">Enter extra income</label><br>
+        <input type="text" id="extraIncome" name="extraIncome" placeholder="Enter extra income from other sources"><br>
+        <div class="error-icon" id="extraIncome-error">!</div>
+        <div class="tooltip" id="extraIncome-tooltip">Please enter numbers only</div><br>
+        
+        <label for="age">Enter age group</label><br>
+        <select id="age" name="age">
+            <option value="<40">&lt; 40</option>
+            <option value=">=40&<60">&ge; 40 &amp; &lt; 60</option>
+            <option value=">=60">&ge; 60</option>
+        </select><br><br>
+        
+        <label for="deductions">Enter total applicable deductions</label><br>
+        <input type="text" id="deductions" name="deductions" placeholder="Add total applicable deductions"><br>
+        <div class="error-icon" id="deductions-error">!</div>
+        <div class="tooltip" id="deductions-tooltip">Please enter numbers only</div><br>
+        
+        <input type="submit" value="Submit">
+        
+        
+    </form>
+    
+    <script src="Logic.js"></script>
+</body>
+
+</html>
